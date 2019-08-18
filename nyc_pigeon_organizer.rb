@@ -14,7 +14,7 @@ def nyc_pigeon_organizer(data)
   pigeon_names = pigeon_names.uniq
   
   while counter < pigeon_names.length do
-    final_pigeon_list[pigeon_names[counter]] => {
+    final_pigeon_list[pigeon_names[counter]] = {
       :color => [],
       :gender => [],
       :lives => []
