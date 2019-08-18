@@ -12,5 +12,10 @@ def nyc_pigeon_organizer(data)
   
   pigeon_names = pigeon_names.uniq
   
-  
+  pigeon_names.each do |pigeon|
+    final_pigeon_list[pigeon] => {
+      :color => [],
+      :gender => [],
+      :lives => []
+    }
 end
