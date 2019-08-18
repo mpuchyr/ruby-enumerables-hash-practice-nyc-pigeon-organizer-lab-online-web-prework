@@ -20,4 +20,14 @@ def nyc_pigeon_organizer(data)
       :lives => []
     }
   end
+  
+  final_pigeon_list.reduce({}) do |p_memo, (p_key, p_value)|
+    data.reduce({}) do |d_memo, (d_key, d_value)|
+        d_value.reduce({}) do |dv_memo, (dv_key, dv_value)|
+            if dv_value.include?(p_key)
+                p_value[d_key].push(dv_key.to_s)
+            end
+        end
+    end
+end
 end
