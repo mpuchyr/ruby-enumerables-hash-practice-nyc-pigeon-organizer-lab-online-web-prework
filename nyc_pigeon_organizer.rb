@@ -1,6 +1,7 @@
 def nyc_pigeon_organizer(data)
   pigeon_names = []
   final_pigeon_list = {}
+  counter = 0
   
   data.reduce({}) do |memo, (key, value)|
     value.reduce({}) do |memo2, (key2, value2)|
@@ -12,11 +13,12 @@ def nyc_pigeon_organizer(data)
   
   pigeon_names = pigeon_names.uniq
   
-  pigeon_names.each do |pigeon|
-    final_pigeon_list[pigeon] => {
+  while counter < pigeon_names.length do
+    final_pigeon_list[pigeon_names[counter]] => {
       :color => [],
       :gender => [],
       :lives => []
     }
+    counter += 1
   end
 end
