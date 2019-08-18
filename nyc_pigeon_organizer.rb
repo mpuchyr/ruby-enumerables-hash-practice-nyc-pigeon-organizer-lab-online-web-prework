@@ -13,12 +13,11 @@ def nyc_pigeon_organizer(data)
   
   pigeon_names = pigeon_names.uniq
   
-  while counter < pigeon_names.length do
-    final_pigeon_list[pigeon_names[counter]] = {
+  pigeon_names.each do |pigeon|
+    final_pigeon_list[pigeon] = {
       :color => [],
       :gender => [],
       :lives => []
     }
-    counter += 1
   end
 end
